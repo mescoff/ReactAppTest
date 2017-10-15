@@ -50,49 +50,32 @@ export default class App extends Component {
   render() {
     //let pic = {source:};
     return (
-      <View style = {styles.mainContainer} >   
-        <View style = {styles.background} >
-          <Image style = {styles.image}
-            source = {require('./images/aerial.jpg')}
-          />    
-        </View>  
-        <View style = {styles.textContainer}>
-          <Greeting />
-          <Text style={styles.welcome}>
-            Welcome to React I think this is great !
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
-        </View>
-      </View>
+      <Image style = {styles.mainContainer}   
+            source = {require('./images/aerial.jpg')}>
+        <Greeting />
+        <Text style={styles.welcome}>
+          Welcome to React I think this is great !
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
+        <Text style={styles.instructions}>
+          {instructions}
+        </Text>
+      </Image>
     );
   }
 }
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    backgroundColor: '#eee',    
-  },
-  image: {
-    flex: 1,
-  },
-  background: {
-    position: 'absolute',
-
-    width: '100%',
-    height:'100%',
-  },
-  textContainer: {
-    flex: 1,
+    flex: 1, 
     backgroundColor: 'transparent',
     justifyContent: 'center',
+    alignItems: 'center',
+    width: null,
+    height: null,
+    //resizeMode: 'contain'/'stretch'
   },
   welcome: {
     fontSize: 20,
